@@ -17,28 +17,28 @@ Once the project moves into development, the press release can be used as a touc
  -->
  
 ## Heading ##
-  > Name the product in a way the reader (i.e. your target customers) will understand.
+This is going to be a very straightforward chat application where a user can enter a message and have it stored in a mongoDB database. If time allows, it will allow a user to login and set send chats with their username attached to it.
 
 ## Sub-Heading ##
-  > Describe who the market for the product is and what benefit they get. One sentence only underneath the title.
+  Bare bones chat cliient
 
 ## Summary ##
-  > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
+We all need another chat application in our lives to keep us more ultra-connected, so here you go!
 
 ## Problem ##
-  > Describe the problem your product solves.
+There are not enough ways for us to stay connected as humans and keep track of all of our riviting thoughts
 
 ## Solution ##
-  > Describe how your product elegantly solves the problem.
+Too many chat applications are too complicated to use, this one cuts down on all the frills that you get with slack and messenger
 
 ## Quote from You ##
-  > A quote from a spokesperson in your company.
+Get your chat on
 
 ## How to Get Started ##
-  > Describe how easy it is to get started.
+No need to login, signup or even enter a username
 
 ## Customer Quote ##
-  > Provide a quote from a hypothetical customer that describes how they experienced the benefit.
+Way better than slack
 
 ## Closing and Call to Action ##
-  > Wrap it up and give pointers where the reader should go next.
+Fire up the app and check it out
