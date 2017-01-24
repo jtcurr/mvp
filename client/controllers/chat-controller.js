@@ -10,5 +10,7 @@ app.controller('chatController', ['$scope', function($scope){
 
   $scope.makeNewMessage = function(){
   	  $scope.messages.push({name: $scope.chatName, message: $scope.chatMessage});
+  	  $scope.chatName = '';
+  	  $scope.chatMessage = '';
   }
 }])
