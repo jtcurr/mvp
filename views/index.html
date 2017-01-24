@@ -1,27 +1,33 @@
 <!DOCTYPE html>
-<html ng-app="chatApp">
+<html ng-app='chatApp'>
 <head>
-  <meta charset="UTF-8">
-  <title>baseChat</title>
+  <meta charset = 'UTF-8'>
+  <script type='text/javascript' src ='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.js'></script>
+
+  <script type='text/javascript' src ='client/controllers/chat-controller.js'></script>
+
 </head>
 <body>
   <h1>baseChat</h1>
-  <br><br>
-    <div ng-controller="chatController">
-      <a>There are {{ chats.length }} messages</a><br><br>
-      <form ng-submit="makeNewMessage()">
-      <input type="text" placeholder="Enter a user name" ng-model="chatName"></input>
-      <input type="text" placeholder="Enter a new message" ng-model="chatMessage"></input>
-      <button>Submit</button>
-    </form>
-    <ul>
-      <li ng-repeat="chat in chats">{{ chat.name }} - {{ chat.message}}</li>
-    </ul>
+  <br>
+  <br>
+  <div ng-controller='chatController'>
+		<form ng-submit='makeNewMessage()'>
+			<input type='text' placeholder='Enter a username' ng-model='chatName'></input>
+			<br>
+			<input type='text' placeholder='Enter a message' ng-model='chatMessage'></input>
+			<br>
+			<br>
+			<button type='submit'>Submit</button>
+			</form>
+			<br>
+			<br>
+		  <ul>
+		  <li ng-repeat="message in messages">{{ message.name }} - {{ message.message }}</li>
+		</ul>
+		 </div>
+ 
+  
 
-    </div>
-     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.js"></script>
-     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-resource.js"></script>
-
-     <script text="text/javascript" src="/../client/controllers/chat-controller.js"></script>
 </body>
 </html>

@@ -1,22 +1,14 @@
-var app = angular.module('chatApp', ['ngResource']);
+var app = angular.module('chatApp', []);
 
-app.controller('chatController', ['$scope', '$resource', function($scope, $resource) {
-		//mock up some dummy data to use as a test
-    var Chat = $resource('/api/chats');
-    Chat.query(function(results){
-    $scope.chats = results;
-    })
-		$scope.chats = [];
+app.controller('chatController', ['$scope', function($scope){
+
+	$scope.messages = [
+	{name: 'Gil', message: 'Biggest malamute'},
+	{name: 'Bacon', message: 'Bacos'},
+	{name: 'Ed', message: 'Littlest malamute'}];
 
 
-		$scope.makeNewMessage = function(){
-			// console.log($scope.chatName);
-			// console.log($scope.chatMessage);
-      var chat = new Chat();
-		  chat.name = $scope.chatName;
-		  chat.message = $scope.chatMessage;
-		  chat.$save(function(results){
-		  	$scope.chats.push(results);
-		  });
-		}
-}]);
+  $scope.makeNewMessage = function(){
+  	  $scope.messages.push({name: $scope.chatName, message: $scope.chatMessage});
+  }
+}])
