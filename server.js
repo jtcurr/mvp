@@ -12,11 +12,13 @@ db.once('open', function(){
 	console.log('Connected to MongoDB')
 });
 
+app.use(bodyParser());
+
 app.get('/api/chats', chatCollection.retrieve);
 
 app.post('/api/chats', chatCollection.send);
 
-app.use(bodyParser());
+
 
 app.get('/', function(req, res){
 	res.sendFile(__dirname + '/views/index.html');

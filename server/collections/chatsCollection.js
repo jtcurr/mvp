@@ -8,15 +8,15 @@ var chatSchema = mongoose.Schema({
 var Chat = mongoose.model('Chat', chatSchema);
 
 module.exports.send = function(req, res) {
-	console.log('Sending');
-	//var saveChat = new Chat {{ res.body }}
-	// saveChat.save(function (err, results) {
-	// 	if (err) {
-	// 		console.log('Error sending message to database');
-	// 	} else {
-	// 		res.send(results);
-	// 	}
-	// })
+	
+  var chat = new Chat(req.body);
+	chat.save(function (err, results) {
+	if (err) {
+		console.log('Error sending message to database');
+	} else {
+	res.send(results);
+	}
+	})
 }
 
 module.exports.retrieve = function(req, res) {
