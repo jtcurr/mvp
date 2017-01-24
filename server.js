@@ -14,11 +14,9 @@ db.once('open', function(){
 
 app.use(bodyParser());
 
-app.get('/api/chats', chatCollection.retrieve);
+app.get('/chatBase/chats', chatCollection.retrieve);
 
-app.post('/api/chats', chatCollection.send);
-
-
+app.post('/chatBase/chats', chatCollection.send);
 
 app.get('/', function(req, res){
 	res.sendFile(__dirname + '/views/index.html');
