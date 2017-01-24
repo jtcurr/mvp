@@ -12,6 +12,9 @@ db.once('open', function(){
 	console.log('Connected to MongoDB')
 });
 
+app.get('/api/chats', chatCollection.retrieve);
+
+app.post('/api/chats', chatCollection.send);
 
 app.use(bodyParser());
 
