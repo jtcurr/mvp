@@ -2,16 +2,23 @@
 <html>
 <head>
   <meta charset='UTF-8'>
+  <script type='text/javascript' src ='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.js'></script>
+  <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-resource.js'></script>
+  <script type='text/javascript' src ='client/controllers/login-controller.js'></script>
 </head>
-
-<body>
-<h1>Please login to continue</h1>
+<body ng-app='loginApp'>
+<h1>//Login to continue//</h1>
 <br>
 <br>
-  <form>
-    <input type='text' placeholder='Username'>
-    <input type='text' placeholder='Password'>
+<div ng-controller='loginController'>
+  <form ng-submit='redirectPage()'>
+    <input type='text' placeholder='Username' ng-model='username'>
+    <br>
+    <input type='text' placeholder='Password' ng-model='password'>
+    <br>
+    <br>
     <button>Submit</button>
   </form>
+</div>
 </body>
 </html>

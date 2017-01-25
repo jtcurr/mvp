@@ -4,6 +4,7 @@ var port = 3000;
 var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
 var chatCollection = require('./server/collections/chatsCollection.js');
+var userCollection = require('./server/collections/userCollection.js');
 
 mongoose.connect('mongodb://localhost:27017');
 var db = mongoose.connection;
@@ -18,9 +19,16 @@ app.get('/chatBase/chats', chatCollection.retrieve);
 
 app.post('/chatBase/chats', chatCollection.send);
 
-app.get('/', function(req, res){
+app.post('/chatBase/creds', userCollection.send);
+
+app.get('/index', function(req, res) {
 	res.sendFile(__dirname + '/views/index.html');
 })
+
+app.get('/', function(req, res) {
+  res.sendFile(__dirname + '/views/login.html');
+})
+
 
 app.use(express.static(__dirname));
 
